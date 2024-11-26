@@ -6,6 +6,8 @@ body {
   height: 100vh;
   background-color: black;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 header h1 {
@@ -32,19 +34,151 @@ header nav {
 
 header nav a {
   text-decoration: none;
-  &:hover {
-    color: rgb(69, 187, 0);
-  }
   background-color: rgb(255, 255, 255);
 }
 
-span {
-  color:rgb(219, 124, 0) ;
+header nav a:hover {
+  color: rgb(69, 187, 0);
+}
+.about,
+.work,
+.resume,
+.contact {
+  color: rgb(219, 124, 0);
 }
 
-.img1 {
-  width: 250px;
-  height: 400px;
+.contact {
   display: flex;
-  float: right;
+  justify-content: center;
+  align-items: center;
 }
+
+span {
+  color: rgb(219, 124, 0);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+#left {
+  text-align: left;
+  flex: 1;
+}
+
+#right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.img1 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-width: 250px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 2px;
+  color: #333;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3 ease;
+}
+
+button:hover {
+  background-color: #005b63;
+}
+
+.attributes {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.attributes:hover {
+color: #f14c00;
+}
+ table {
+      width: 50%; 
+      margin: 20px auto; 
+      border-collapse: collapse; 
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    thead {
+      background-color: #f14c00;
+    }
+
+    th, td {
+      border: 1px solid #4f7703; 
+      text-align: left; 
+      padding: 10px; 
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f14c00; /* Add zebra-striping */
+    }
+
+    tr:hover {
+      background-color: #0f4d47; /* Highlight row on hover */
+    }
